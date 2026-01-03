@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的推导笔记</title>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        body {
+            font-family: "Georgia", "Times New Roman", serif; /* 学术衬线字体 */
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+        h1 { margin: 0; font-size: 2.2em; }
+        .date { color: #666; font-size: 0.9em; margin-bottom: 20px; display: block; }
+        .entry {
+            background: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        h2 { font-size: 1.5em; border-left: 4px solid #007bff; padding-left: 10px; margin-top: 0; }
+        code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; font-family: monospace; }
+        .footer { text-align: center; font-size: 0.8em; color: #888; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>物理推导笔记</h1>
+        <p>存储一些个人的小推导和思考</p>
+    </header>
+
+    <div class="entry">
+        <h2>示例：高斯积分</h2>
+        <span class="date">2026-01-03</span>
+        <p>这是为了测试 MathJax 是否工作正常。我们要计算以下积分：</p>
+        
+        $$ I = \int_{-\infty}^{\infty} e^{-x^2} dx $$
+        
+        <p>考虑其平方：</p>
+        
+        $$ I^2 = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-(x^2+y^2)} dx dy $$
+        
+        <p>转换到极坐标系，我们得到结果为 $\sqrt{\pi}$。</p>
+    </div>
+
+    <div class="entry">
+        <h2>在这里写你的新标题</h2>
+        <span class="date">日期</span>
+        <p>在这里写正文。你可以随意使用 LaTeX，比如半狄拉克费米子的哈密顿量...</p>
+        
+        $$ H = \dots $$
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Powered by GitHub Pages
+    </div>
+
+</body>
+</html>
